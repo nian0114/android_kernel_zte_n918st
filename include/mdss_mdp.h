@@ -1,1 +1,1 @@
-/home/nian/Desktop/V5s_N918St_KitKat_kernel/drivers/video/msm/mdss/mdss_mdp.h
+/home/nian/V5s_N918St_KitKat_kernel/drivers/video/msm/mdss/mdss_mdp.h

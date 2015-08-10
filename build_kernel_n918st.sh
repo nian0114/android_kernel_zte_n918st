@@ -2,6 +2,8 @@
 export KERNELDIR=`readlink -f .`
 
 export ARCH=arm
+export CROSS_COMPILE=../arm-eabi-4.7/bin/arm-eabi-
+
 export CONFIG_BUILD_ARM_APPENDED_DTB_IMAGE_NAMES_ZTEMT=qcom/msm8916-mtp-N918X
 export BUILD_LOCALVERSION="N918St-Nian-Release"
 
@@ -12,7 +14,8 @@ then
   cd $KERNELDIR
 fi
 
-export CROSS_COMPILE=../arm-eabi-4.7/bin/arm-eabi-
+ln -s $KERNELDIR/drivers/video/msm/mdss/mdss_mdp.h $KERNELDIR/include/mdss_mdp.h
+ln -s $KERNELDIR/drivers/video/msm/mdss/mmdss_mdp_trace.h $KERNELDIR/include/mdss_mdp_trace.h
 
 if [ ! -f $KERNELDIR/.config ];
 then
