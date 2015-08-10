@@ -14,6 +14,8 @@ then
   cd $KERNELDIR
 fi
 
+rm -rf $KERNELDIR/include/mdss_mdp.h $KERNELDIR/include/mdss_mdp_trace.h
+
 ln -s $KERNELDIR/drivers/video/msm/mdss/mdss_mdp.h $KERNELDIR/include/mdss_mdp.h
 ln -s $KERNELDIR/drivers/video/msm/mdss/mmdss_mdp_trace.h $KERNELDIR/include/mdss_mdp_trace.h
 
